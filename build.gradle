@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse' 
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    
+    testCompile 'junit:junit:4.12'
+    
+}
+
+tasks.withType( JavaCompile ) {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType( Javadoc ) {
+	options.encoding = "UTF-8"
+	options.charSet = "UTF-8"
+    title = 'wee0 Api - JavaDoc'
+}
+
+task publishToLocal( type: Copy ){
+	from jar 
+	into local_sdk_lib
+}
