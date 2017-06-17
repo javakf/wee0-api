@@ -55,6 +55,16 @@ public final class Objects{
 	}
 
 	/**
+	 * 创建一个框架字符串对象
+	 * 
+	 * @param value 原始数据对象
+	 * @return 框架字符串对象
+	 */
+	public static IString newString( Object value ){
+		return impl().newString( value );
+	}
+
+	/**
 	 * 创建一个框架数值对象
 	 * 
 	 * @param value 原始数据
@@ -114,6 +124,16 @@ public final class Objects{
 	}
 
 	/**
+	 * 根据指定的map数据字符串创建一个框架键值对对象。
+	 * 
+	 * @param mapData map数据字符串
+	 * @return 框架键值对对象
+	 */
+	public static IMap newMap( String mapData ){
+		return impl().newMap( mapData );
+	}
+
+	/**
 	 * 创建一个框架列表对象。
 	 * 
 	 * @return 框架列表对象
@@ -132,25 +152,15 @@ public final class Objects{
 		return impl().newList( initialCapacity );
 	}
 
-//	/**
-//	 * 将指定对象转换为json数据。
-//	 * 
-//	 * @param obj 要转换的对象
-//	 * @return 对象的json表示数据
-//	 */
-//	public static String jsonTo( IObject obj ){
-//		return _IMPL.jsonTo( obj );
-//	}
-//
-//	/**
-//	 * 将指定json数据转换为数据对象。
-//	 * 
-//	 * @param json json数据
-//	 * @return 数据对象
-//	 */
-//	public static IObject jsonFrom( String json ){
-//		return _IMPL.jsonFrom( json );
-//	}
+	/**
+	 * 根据指定的list数据字符串创建一个框架列表对象。
+	 * 
+	 * @param listData list数据字符串
+	 * @return 框架列表对象
+	 */
+	public static IList newList( String listData ){
+		return impl().newList( listData );
+	}
 
 	/**********************************************************************************
 	 ****** 前置检查操作部分

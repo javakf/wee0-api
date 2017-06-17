@@ -45,6 +45,14 @@ public interface IObjects{
 	IString newString( String value );
 
 	/**
+	 * 创建一个框架字符串对象
+	 * 
+	 * @param value 原始数据对象
+	 * @return 框架字符串对象
+	 */
+	IString newString( Object value );
+
+	/**
 	 * 创建一个框架数值对象
 	 * 
 	 * @param value 原始数据
@@ -92,6 +100,14 @@ public interface IObjects{
 	IMap newMap( int initialCapacity );
 
 	/**
+	 * 根据指定的map数据字符串创建一个框架键值对对象。
+	 * 
+	 * @param mapData map数据字符串
+	 * @return 框架键值对对象
+	 */
+	IMap newMap( String mapData );
+
+	/**
 	 * 创建一个框架列表对象。
 	 * 
 	 * @return 框架列表对象
@@ -105,6 +121,14 @@ public interface IObjects{
 	 * @return 框架列表对象
 	 */
 	IList newList( int initialCapacity );
+	
+	/**
+	 * 根据指定的list数据字符串创建一个框架列表对象。
+	 * 
+	 * @param listData list数据字符串
+	 * @return 框架列表对象
+	 */
+	IList newList( String listData );
 
 //	/**
 //	 * 将指定对象转换为JSON格式数据。

@@ -15,6 +15,8 @@
  **/
 package wee0.command;
 
+import wee0.lang.IList;
+import wee0.lang.IMap;
 import wee0.lang.IObject;
 
 /**
@@ -45,6 +47,22 @@ public interface ICommandArgs{
 	 * @return 参数对象
 	 */
 	IObject getObject( int index, IObject defValue );
+	
+	/**
+	 * 获取指定索引位置的Map类型参数对象，如果不存在时返回指定的默认值，存在但不是IMap类型时将报错。
+	 * @param index 参数索引位置
+	 * @param defValue 索引位置参数不存在或者为null时返回的默认值
+	 * @return 指定索引位置的Map类型参数
+	 */
+	IMap getMap( int index, IMap defValue ) ;
+	
+	/**
+	 * 获取指定索引位置的List类型参数对象，如果不存在时返回指定的默认值，存在但不是IList类型时将报错。
+	 * @param index 参数索引位置
+	 * @param defValue 索引位置参数不存在或者为null时返回的默认值
+	 * @return 指定索引位置的List类型参数
+	 */
+	IList getList( int index, IList defValue ) ;
 
 	/**
 	 * 获取指定索引位置的字符串参数,不存在时返回指定的默认值。

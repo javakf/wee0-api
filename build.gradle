@@ -24,7 +24,7 @@ tasks.withType( Javadoc ) {
     title = 'wee0 Api - JavaDoc'
 }
 
-task publishToLocal( type: Copy ){
+task distLocal( type: Copy ){
 	from jar 
 	into local_sdk_lib
 }

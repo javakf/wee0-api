@@ -40,9 +40,10 @@ public interface ICommandManager{
 	/**
 	 * 注册一个指令对象
 	 * 
+	 * @param libId 指令库标识
 	 * @param command 指令对象实例
 	 */
-	void commandReg( ICommand command );
+	void commandReg( String libId, ICommand command );
 
 	/**
 	 * 调用指定唯一标识的指令。

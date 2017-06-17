@@ -17,6 +17,8 @@ package wee0;
 
 import com.wee0.utils.IUtilManager;
 
+import wee0.codec.ICodec;
+import wee0.codec.IDigest;
 import wee0.command.ICommandHelper;
 import wee0.config.IConfig;
 import wee0.core.IBindings;
@@ -85,6 +87,20 @@ public interface IWee0{
 	 * @return 临时文件存储目录
 	 */
 	String getTmpDir();
+
+	/**
+	 * 获取编解码算法操作实现者实例。
+	 * 
+	 * @return 编解码算法操作实现者实例
+	 */
+	ICodec getCodec();
+
+	/**
+	 * 获取单向不可逆摘要算法支持实现者实例。
+	 * 
+	 * @return 单向不可逆摘要算法支持实现者实例
+	 */
+	IDigest getDigest();
 
 	/**
 	 * 获取工具对象管理器

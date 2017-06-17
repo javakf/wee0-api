@@ -98,13 +98,6 @@ public interface IList extends IObject{
 	IObject get( int index );
 
 	/**
-	 * 列表成员数量。
-	 * 
-	 * @return 成员数量
-	 */
-	int length();
-
-	/**
 	 * 遍历数据方法
 	 * 
 	 * @param action 数据接收处理逻辑

@@ -52,4 +52,11 @@ public interface IObject extends Serializable{
 	 */
 	String toString();
 
+	/**
+	 * 获取长度信息
+	 * 
+	 * @return 长度信息
+	 */
+	int length();
+
 } // end interface
